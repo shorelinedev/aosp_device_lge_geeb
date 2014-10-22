@@ -15,7 +15,7 @@
 #
 
 KERNEL_DEFCONFIG := geeb_defconfig
-KERNEL_DIR := kernel
+KERNEL_DIR := kernel/geeb
 
 -include $(TOP)/$(KERNEL_DIR)/AndroidKernel.mk
 
