@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
 	device/lge/geeb/thermald-geeb.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
+        device/lge/hammerhead/twrp.fstab:recovery/root/etc/twrp.fstab
+
+PRODUCT_COPY_FILES += \
 	device/lge/geeb/init.geeb.rc:root/init.geeb.rc \
 	device/lge/geeb/init.geeb.usb.rc:root/init.geeb.usb.rc \
 	device/lge/geeb/fstab.geeb:root/fstab.geeb \
