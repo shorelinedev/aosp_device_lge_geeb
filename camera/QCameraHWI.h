@@ -35,7 +35,6 @@
 #include <QComOMXMetadata.h>
 
 extern "C" {
-#include <linux/android_pmem.h>
 #include <linux/msm_ion.h>
 #include <mm_camera_interface2.h>
 #include "mm_omx_jpeg_encoder.h"
@@ -849,6 +848,11 @@ private:
      int                 mNoDisplayMode;
      int                 mIsoValue;
 
+     /* Used to show the process state of snapshot_jpeg_cb*/
+     Mutex                  mSnapJpegCbLock;
+     Condition              mSnapJpegCbWait;
+     bool                   mSnapJpegCbRunning;
+     bool                   mSnapCbDisabled;
 };
 
 }; // namespace android
