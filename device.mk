@@ -35,6 +35,15 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
+ifneq ($(findstring svelte, $(TARGET_PRODUCT)),)
+LOCAL_KERNEL := device/lge/geeb_svelte-kernel/kernel
+else
+LOCAL_KERNEL := device/lge/geeb-kernel/kernel
+endif
+
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
+
 PRODUCT_COPY_FILES += \
 	kernel/geeb/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	kernel/geeb/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
