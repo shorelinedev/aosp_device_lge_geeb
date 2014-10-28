@@ -110,25 +110,31 @@ BOARD_SEPOLICY_DIRS += \
         device/lge/geeb/sepolicy
 
 BOARD_SEPOLICY_UNION := \
-       app.te \
-       bluetooth.te \
+       bluetooth_loader.te \
+       bridge.te \
+       camera.te \
+       conn_init.te \
        device.te \
        domain.te \
-       drmserver.te \
        file.te \
        file_contexts \
-       hci_init.te \
-       init_shell.te \
-       keystore.te \
-       mediaserver.te \
+       hostapd.te \
        kickstart.te \
-       nfc.te \
+       mediaserver.te \
+       mpdecision.te \
+       netmgrd.te \
+       property.te \
+       property_contexts \
+       qmux.te \
        rild.te \
+       rmt.te \
+       sensors.te \
        surfaceflinger.te \
-       system.te \
-       ueventd.te \
-       wpa.te
-
+       system_server.te \
+       te_macros \
+       tee.te \
+       thermald.te \
+       ueventd.te 
 
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
